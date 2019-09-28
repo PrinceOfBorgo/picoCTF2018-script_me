@@ -3,7 +3,7 @@
 import string, sys
 
 s = sys.argv[1] # input string to parse. The string is made of operands (balanced sequences of round brackets,
-				# eventually concatenated) separeted by "+" operators, e.g. "(()(()))() + ()()(())"
+                # eventually concatenated) separeted by "+" operators, e.g. "(()(()))() + ()()(())"
 
 stack = [] # stack used to store brackets during parsing
 
@@ -12,7 +12,7 @@ opnum = 0 # index of the current operand in the list (every time a "+" is found,
 
 opstart = 0 # index of the first character of current operand in the input string s
 depth = 0 # partial brackets depth: at each ")" decrease depth by 1 and at each "(" increase depth by 1 and compare it with
-		  # the maximum depth achieved up that moment (stored as second item of couples in op: op[opnum][1] = current maximum depth)
+          # the maximum depth achieved up that moment (stored as second item of couples in op: op[opnum][1] = current maximum depth)
 
 for i, c in enumerate(s): # iterate through string s characters considering the index
 	if c =="(":
