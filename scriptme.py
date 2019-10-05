@@ -98,8 +98,8 @@ sock.settimeout(5) 	# set timeout to handle connection errors
 try:
 	sock.connect((host, port)) 	# try to connect
 except socket.error as exc:
-    print(FAIL + "Caught exception socket.error : %s" % exc)
-    exit()
+	print(FAIL + "Caught exception socket.error : %s" % exc)
+	exit()
     
 print(">> Client connected successfully to " + BOLD + OKBLUE + host + ENDC + " on port " + BOLD + OKBLUE + str(port) + ENDC + "\n")
 
