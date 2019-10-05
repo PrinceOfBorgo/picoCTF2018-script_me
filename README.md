@@ -30,7 +30,7 @@ We must insert the simplified form of the expressions provided by the system fol
 
 Rules can be summarized as follows:
 - Expressions are composed of binary operators `+` and operands given by balanced sequences of round brackets, eventually concatenated;
-- We can assign to each operand the maximum depth of its nested bracket (e.g. `()()` -> 1, `(()())` -> 2, `((())())()` -> 3);
+- We can assign to each operand the maximum depth of its nested brackets (e.g. `()()` -> 1, `(()())` -> 2, `((())())()` -> 3);
 - We proceed solving from left to right;
 - If the two considered operands have the same depth, then we join them by concatenation (e.g. `(()()) + (())() = (()())(())()`);
 - If the two considered operands have different depths, then the one with lesser depth enters the most external level of the other (left or right, according to its position) (e.g. `((())) + () = ((())())`, `() + ((())) = (()(()))`).
