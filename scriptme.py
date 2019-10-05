@@ -68,7 +68,7 @@ def solve(s):
 
 		if depth1 == depth2: # if they have the same depth then join them with a concatenation
 			op1 += op2
-		elif depth1 < depth2:  # otherwise the one with lesser depth enters the first level of the other (left or right, according to its position)
+		elif depth1 < depth2:  # otherwise the one with lesser depth enters the most external level of the other (left or right, according to its position)
 			op1 = "(" + op1 + op2.strip()[1:]
 			depth1 = depth2
 		else:
