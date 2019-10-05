@@ -8,7 +8,7 @@ Server and port can be different.
 > Maybe try writing a python script?
 
 ## Problem description
-After connecting to server running `nc 2018shell.picoctf.com 8672` command in terminal we get:
+After connecting to server running `nc 2018shell.picoctf.com 8672` command (or whatever picoCTF tells you to use) in terminal we get:
 ```
 Rules:
 () + () = ()()                                      => [combine]
