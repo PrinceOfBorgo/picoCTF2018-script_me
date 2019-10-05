@@ -97,7 +97,7 @@ sock = socket.socket()
 sock.settimeout(5) 	# set timeout to handle connection errors
 try:
 	sock.connect((host, port)) 	# try to connect
-except socket.error, exc:
+except socket.error as exc:
     print FAIL + "Caught exception socket.error : %s" % exc
     exit()
     
