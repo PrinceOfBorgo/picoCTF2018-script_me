@@ -2,17 +2,19 @@
 
 import string, sys, socket
 
-# Receives one char at a time from the socket until it finds a new line char. Then it returns the line
-def receive_line(sock):
-	data = []
-	while True:
-		new_data = sock.recv(1).decode("ascii")
-		if new_data == "\n":
-			break
-		else:
-			data.append(new_data)
+buffer = "" # global buffer used to receive lines from socket
 
-	return "".join(data)
+# Receives a line from the socket.
+def receive_line(sock):
+	global buffer
+	index = buffer.find("\n")
+	if index != -1:	# there is a new line characters in buffer
+		line = buffer[:index]	# get the first line from buffer
+		buffer = buffer[index + 1:]	# update buffer to remove the first line
+		return line
+	else:
+		buffer += sock.recv(4096).decode("ascii")	# receive new data from socket and append to buffer
+		return receive_line(sock)	# recursive call
 
 # Parses and simplifies the input string. The string is made of operands (balanced sequences of round brackets, eventually concatenated) 
 # separated by "+" operators, e.g. "(()(()))() + ()()(())"
