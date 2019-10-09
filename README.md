@@ -2,7 +2,7 @@
 ## Text
 > Can you understand the language and answer the questions to retrieve the flag? Connect to the service with `nc 2018shell.picoctf.com 8672`
 
-Server and port can be different.
+Server and port may be different.
 
 ## Hints
 > Maybe try writing a python script?
