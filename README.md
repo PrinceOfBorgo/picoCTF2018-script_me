@@ -35,8 +35,11 @@ Rules can be summarized as follows:
 - If the two considered operands have the same depth, then we join them by concatenation (e.g. `(()()) + (())() = (()())(())()`);
 - If the two considered operands have different depths, then the one with lesser depth enters the most external level of the other (left or right, according to its position) (e.g. `((())) + () = ((())())`, `() + ((())) = (()(()))`).
 
-## The solution
+## Solution
 The solution I used is a python script that asks for server and port to which to connect. Once connected, the script will solve the expressions provided by the server until it gets to the required flag printing it to screen.
+
+## Usage
+Simply run `scriptme.py` as a python script and insert host and port to which to connect:
 ```
 $ python scriptme.py
 Host: 2018shell.picoctf.com
