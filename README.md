@@ -38,7 +38,7 @@ Rules can be summarized as follows:
 ## The solution
 The solution I used is a python script that asks for server and port to which to connect. Once connected, the script will solve the expressions provided by the server until it gets to the required flag printing it to screen.
 ```
-root@kali:~# python scriptme.py
+$ python scriptme.py
 Host: 2018shell.picoctf.com
 Port: 8672
 >> Opening connection to 2018shell.picoctf.com on port 8672
